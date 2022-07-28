@@ -5,6 +5,8 @@ import { AppProps } from "next/app";
 import { FC } from "react";
 
 import { ThemeProvider, createTheme } from "@mui/material";
+import { store } from "@rtk/store";
+import { Provider } from "react-redux";
 // interface Props {
 //   children: React.ReactElement;
 // }
@@ -14,11 +16,13 @@ function MyApp({
   pageProps,
 }: AppProps & { Component: { Layout: FC } }) {
   return (
-    <ThemeProvider theme={theme}>
-      <Layout>
-        <Component {...pageProps} />
-      </Layout>
-    </ThemeProvider>
+    <Provider store={store}>
+      <ThemeProvider theme={theme}>
+        <Layout>
+          <Component {...pageProps} />
+        </Layout>
+      </ThemeProvider>
+    </Provider>
   );
 }
 
