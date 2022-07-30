@@ -1,7 +1,11 @@
 import type { NextPage } from "next";
+import { useEffect } from "react";
 
 import styles from "../styles/Home.module.css";
 
+useEffect((): void => {
+  console.log("useEffect");
+}, [])
 const Home: NextPage = () => {
   return (
     <div className={styles.container}>
