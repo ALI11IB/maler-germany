@@ -1,8 +1,25 @@
-.root {
+.maler {
+  margin: 2 !important;
+  font-family: "lucida calligraphy" !important;
+  letter-spacing: ".3rem" !important;
+  color: "inherit" !important;
+  text-decoration: "none" !important;
+  font-size: 35px !important;
+  font-style: "italic" !important;
 }
-
-.link {
+.searchBox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 35px;
+  background-color: #eaeaea;
+  border-radius: 5px;
+  padding: 0 10px;
 }
-
-.logo {
+.searchText fieldset {
+  border: none;
+}
+.searchIcon {
+  color: #939393;
+  cursor: pointer;
 }

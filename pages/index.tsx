@@ -1,12 +1,14 @@
 import type { NextPage } from "next";
-import { useEffect } from "react";
-
+import { useLayoutEffect } from "react";
+import { useAppSelector } from "@rtk/store";
+import Router from "next/router";
 import styles from "../styles/Home.module.css";
 
-useEffect((): void => {
-  console.log("useEffect");
-}, [])
 const Home: NextPage = () => {
+  // const signed = useAppSelector((state) => state.users.signed);
+  // useLayoutEffect((): void => {
+  //   if (!signed) Router.push("/login");
+  // }, [signed]);
   return (
     <div className={styles.container}>
       <main className={styles.main}>
