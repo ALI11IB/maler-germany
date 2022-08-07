@@ -20,7 +20,7 @@ import InputBase from "@mui/material/InputBase";
 import logo from "../../../assets/images/logo.png";
 import { textTransform } from "@mui/system";
 import TextField from "@mui/material/TextField";
-import LanguageSelect from "@components/common/LanguageSelect";
+import LanguageSelect from "@components/ui/LanguageSelect";
 import styles from "./Navbar.module.css";
 import Link from "@components/common/Link";
 

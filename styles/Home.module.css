@@ -1,10 +1,7 @@
-.header {
+.intro {
   height: 865px;
   background-image: url("../assets/images/painting-servic.png");
   background-position: top;
   background-size: contain;
   background-repeat: no-repeat;
-}
-.headerTitle {
-  color: #000000;
 }
