@@ -22,12 +22,21 @@ import { textTransform } from "@mui/system";
 import TextField from "@mui/material/TextField";
 import LanguageSelect from "@components/common/LanguageSelect";
 import styles from "./Navbar.module.css";
+import Link from "@components/common/Link";
 
-const pages = ["Home", "Register"];
+const pages = [
+  { id: "1", name: "Home", href: "/" },
+  { id: "2", name: "Register", href: "/register" },
+];
 const settings = ["Profile", "Account", "Dashboard", "Logout"];
 
 const Search = () => (
-  <Box className={styles.searchBox}>
+  <Box
+    className={styles.searchBox}
+    sx={{
+      display: { xs: "none", md: "flex" },
+    }}
+  >
     <TextField
       className={styles.searchText}
       placeholder="Search…"
@@ -37,6 +46,7 @@ const Search = () => (
   </Box>
 );
 const ResponsiveAppBar = () => {
+  const [activeLink, setActiveLink] = React.useState<string>("1");
   const [anchorElNav, setAnchorElNav] = React.useState<null | HTMLElement>(
     null
   );
@@ -120,8 +130,8 @@ const ResponsiveAppBar = () => {
               }}
             >
               {pages.map((page) => (
-                <MenuItem key={page} onClick={handleCloseNavMenu}>
-                  <Typography textAlign="center">{page}</Typography>
+                <MenuItem key={page.id} onClick={handleCloseNavMenu}>
+                  <Typography textAlign="center">{page.name}</Typography>
                 </MenuItem>
               ))}
             </Menu>
@@ -149,9 +159,10 @@ const ResponsiveAppBar = () => {
             }}
           >
             {pages.map((page) => (
-              <Button
-                key={page}
-                onClick={handleCloseNavMenu}
+              <Link
+                href={page.href}
+                key={page.id}
+                onClick={() => setActiveLink(page.id)}
                 sx={{
                   my: 2,
                   color: "black",
@@ -159,13 +170,17 @@ const ResponsiveAppBar = () => {
                   textTransform: "none",
                   fontSize: "20px",
                   margin: "0 20px",
+                  textDecoration: page.id === activeLink ? "underline" : "none",
+                  textDecorationColor: "#E6934D",
                 }}
               >
-                {page}
-              </Button>
+                {page.name}
+              </Link>
             ))}
           </Box>
           <LanguageSelect />
+
+          <Search />
           <Tooltip title="Account settings">
             <IconButton sx={{ p: 0, m: 2 }}>
               <PersonIcon
@@ -173,7 +188,6 @@ const ResponsiveAppBar = () => {
               />
             </IconButton>
           </Tooltip>
-          <Search />
           <Box sx={{ flexGrow: 0 }}>
             <Tooltip title="Open settings">
               <IconButton onClick={handleOpenUserMenu} sx={{ p: 0, m: 2 }}>
