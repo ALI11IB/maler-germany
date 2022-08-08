@@ -60,7 +60,7 @@ export default function Services() {
       >
         {items.map((item) => (
           <Grid item xs={4} md={3} lg={3} key={item.id}>
-            <ServiceCard key={item.id} {...item} />
+            <ServiceCard {...item} />
           </Grid>
         ))}
       </Grid>

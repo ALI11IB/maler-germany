@@ -7,7 +7,13 @@ import { Navbar } from "@components/common";
 import styles from "../styles/Home.module.css";
 
 import { Container, Typography, Box, Grid } from "@mui/material";
-import { Intro, Advantages, WhyChoose, Services } from "@components/ui/Home";
+import {
+  Intro,
+  Advantages,
+  WhyChoose,
+  Services,
+  Gallery,
+} from "@components/ui/Home";
 const Home: NextPage = () => {
   // const signed = useAppSelector((state) => state.users.signed);
   // useLayoutEffect((): void => {
@@ -26,6 +32,7 @@ const Home: NextPage = () => {
         <Advantages />
         <WhyChoose />
         <Services />
+        <Gallery />
       </Container>
     </Box>
   );
