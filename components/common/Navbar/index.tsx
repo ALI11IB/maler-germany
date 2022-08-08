@@ -155,7 +155,8 @@ const ResponsiveAppBar = () => {
           <Box
             sx={{
               flexGrow: 1,
-              display: { xs: "none", md: "flex", margin: "0 20px" },
+              display: { xs: "none", md: "flex" },
+              margin: "0 20px",
             }}
           >
             {pages.map((page) => (
@@ -182,7 +183,7 @@ const ResponsiveAppBar = () => {
 
           <Search />
           <Tooltip title="Account settings">
-            <IconButton sx={{ p: 0, m: 2 }}>
+            <IconButton sx={{ p: 0, m: { xs: 0, md: 2 } }}>
               <PersonIcon
                 sx={{ width: "2em", height: "2em", color: "#000000" }}
               />
@@ -190,7 +191,7 @@ const ResponsiveAppBar = () => {
           </Tooltip>
           <Box sx={{ flexGrow: 0 }}>
             <Tooltip title="Open settings">
-              <IconButton onClick={handleOpenUserMenu} sx={{ p: 0, m: 2 }}>
+              <IconButton onClick={handleOpenUserMenu} sx={{ p: 0, my: 2 }}>
                 <MenuIcon
                   sx={{ width: "2em", height: "2em", color: "#000000" }}
                 />

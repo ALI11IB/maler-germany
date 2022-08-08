@@ -1,36 +1,106 @@
+import { Box, Divider, Grid, Typography } from "@mui/material";
 import * as React from "react";
-import InputLabel from "@mui/material/InputLabel";
-import MenuItem from "@mui/material/MenuItem";
-import FormHelperText from "@mui/material/FormHelperText";
-import FormControl from "@mui/material/FormControl";
-import Select, { SelectChangeEvent } from "@mui/material/Select";
+import ServiceCard from "../ServiceCard";
+import styles from "./Services.module.css";
+import painting1 from "../../../../assets/icons/painting1.png";
+import painting2 from "../../../../assets/icons/painting2.png";
+import painting3 from "../../../../assets/icons/painting3.png";
 
-export default function LanguageSelect() {
-  const [lang, setLang] = React.useState("1");
-
-  const handleChange = (event: SelectChangeEvent) => {
-    setLang(event.target.value);
-  };
-
+const cards = [
+  {
+    title: "Interior Painting",
+    text: "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et",
+    image: painting1,
+    margin: "50px 20px",
+  },
+  {
+    title: "Exterior Painting",
+    text: "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et",
+    image: painting2,
+    margin: "20px 20px",
+  },
+  {
+    title: "Exterior Painting",
+    text: "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et",
+    image: painting3,
+    margin: "50px 20px",
+  },
+];
+export default function Services() {
   return (
-    <div>
-      <FormControl sx={{ m: 1, minWidth: 120 }}>
-        <InputLabel id="demo-simple-select-helper-label">
-          Select Language
-        </InputLabel>
-        <Select
-          sx={{ height: 40 }}
-          labelId="demo-simple-select-helper-label"
-          id="demo-simple-select-helper"
-          value={lang}
-          onChange={handleChange}
-          label="Select Language"
-          //   inputProps={{ "aria-label": "Without label" }}
+    <Grid container spacing={2}>
+      <Grid item xs={4} md={4}>
+        <ServiceCard {...cards[0]} />
+      </Grid>
+      <Grid item xs={4} md={4}>
+        <ServiceCard {...cards[1]} />
+      </Grid>
+      <Grid item xs={4} md={4}>
+        <ServiceCard {...cards[2]} />
+      </Grid>
+      <Grid item xs={12}>
+        <Typography
+          gutterBottom
+          variant="h5"
+          component="div"
+          sx={{ textAlign: "center" }}
         >
-          <MenuItem value={1}>English</MenuItem>
-          <MenuItem value={2}>Deutsch</MenuItem>
-        </Select>
-      </FormControl>
-    </div>
+          We offer Residential & Commercial Painting services
+        </Typography>
+        <Box display="flex" justifyContent="center">
+          <Typography
+            variant="body2"
+            color="text.secondary"
+            sx={{
+              textAlign: "center",
+              maxWidth: "700px",
+              fontSize: "1.25rem ",
+            }}
+          >
+            Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
+            nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam
+            erat, sed diam voluptua. At vero eos et accusam et justo duo dolores
+            et ea rebum.
+          </Typography>
+        </Box>
+      </Grid>
+      <Grid item xs={12}>
+        <Box display="flex" justifyContent="center" my={2}>
+          <Typography variant="body2" className={styles.offersGolden}>
+            Quality Finish
+          </Typography>
+
+          <Typography
+            variant="body2"
+            className={styles.offersGolden}
+            sx={{ px: { xm: "20px", md: "40px", lg: "60px" } }}
+          >
+            /
+          </Typography>
+
+          <Typography variant="body2" className={styles.offersGolden}>
+            Best Support
+          </Typography>
+
+          <Typography
+            variant="body2"
+            className={styles.offersGolden}
+            sx={{ px: { xm: "20px", md: "40px", lg: "60px" } }}
+          >
+            /
+          </Typography>
+
+          <Typography variant="body2" className={styles.offersGolden}>
+            Better Price
+          </Typography>
+        </Box>
+      </Grid>
+      <Grid item xs={12} md={12}>
+        <Divider
+          variant="middle"
+          sx={{ borderColor: "rgb(0 0 0 / 21%)", mx: { xm: 4, md: 6, lg: 20 } }}
+        />
+      </Grid>
+    </Grid>
   );
 }

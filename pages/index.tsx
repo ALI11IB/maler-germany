@@ -6,10 +6,8 @@ import { Navbar } from "@components/common";
 
 import styles from "../styles/Home.module.css";
 
-import Box from "@mui/material/Box";
-import Grid from "@mui/material/Grid";
-import { Typography } from "@mui/material";
-import { Intro } from "@components/ui/Home";
+import { Container, Typography, Box, Grid } from "@mui/material";
+import { Intro, Services } from "@components/ui/Home";
 const Home: NextPage = () => {
   // const signed = useAppSelector((state) => state.users.signed);
   // useLayoutEffect((): void => {
@@ -21,6 +19,12 @@ const Home: NextPage = () => {
         <Navbar />
         <Intro />
       </Box>
+      <Container
+        maxWidth="xl"
+        sx={{ padding: { xs: "0 24px", md: "0 60px", lg: "0 80px" } }}
+      >
+        <Services />
+      </Container>
     </Box>
   );
 };

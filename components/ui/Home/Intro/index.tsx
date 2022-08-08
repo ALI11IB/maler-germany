@@ -49,7 +49,6 @@ export default function Intro() {
           variant="h6"
           noWrap
           sx={{
-            width: "300px",
             whiteSpace: "pre-wrap",
             marginLeft: "25%",
             fontSize: { xs: "0.5em", md: "0.75em", lg: "1em" },
