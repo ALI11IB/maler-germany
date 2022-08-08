@@ -13,6 +13,7 @@ import {
   WhyChoose,
   Services,
   Gallery,
+  ContactUs,
 } from "@components/ui/Home";
 const Home: NextPage = () => {
   // const signed = useAppSelector((state) => state.users.signed);
@@ -33,6 +34,7 @@ const Home: NextPage = () => {
         <WhyChoose />
         <Services />
         <Gallery />
+        <ContactUs />
       </Container>
     </Box>
   );

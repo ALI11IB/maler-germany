@@ -3,6 +3,7 @@ import { Layout } from "@components/common";
 
 import { AppProps } from "next/app";
 import { FC } from "react";
+import Head from "next/head";
 
 import { ThemeProvider, createTheme } from "@mui/material";
 import CssBaseline from "@mui/material/CssBaseline";
@@ -11,7 +12,12 @@ import { Provider } from "react-redux";
 // interface Props {
 //   children: React.ReactElement;
 // }
-const theme = createTheme();
+const theme = createTheme({
+  typography: {
+    fontFamily: '"Poppins", "Roboto", "Helvetica", "Arial", sans-serif',
+  },
+});
+
 function MyApp({
   Component,
   pageProps,
@@ -20,6 +26,14 @@ function MyApp({
     <Provider store={store}>
       <ThemeProvider theme={theme}>
         <CssBaseline />
+
+        <Head>
+          <title>Maler</title>
+          <meta
+            name="viewport"
+            content="initial-scale=1.0, width=device-width"
+          />
+        </Head>
         <Layout>
           <Component {...pageProps} />
         </Layout>

@@ -1,0 +1,11 @@
+.textField {
+  width: 90%;
+  margin-bottom: 40px;
+}
+.textField > label {
+  font-size: 1.5rem;
+}
+.textField input {
+  height: 2em;
+  font-size: 1.2rem;
+}

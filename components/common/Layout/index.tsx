@@ -9,10 +9,8 @@ interface Props {
 }
 const Layout: FC<Props> = ({ children }) => {
   return (
-    // <Container maxWidth="xl" style={{ padding: 0 }}>
     <Box
       sx={{
-        // my: 4,
         display: "flex",
         flexDirection: "column",
         justifyContent: "center",
@@ -20,12 +18,9 @@ const Layout: FC<Props> = ({ children }) => {
       }}
     >
       {/* <Navbar /> */}
-      {/* <Grid container spacing={2}> */}
       {children}
-      {/* </Grid> */}
       <Footer />
     </Box>
-    // </Container>
   );
 };
 
