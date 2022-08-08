@@ -5,17 +5,19 @@ import CardMedia from "@mui/material/CardMedia";
 import Typography from "@mui/material/Typography";
 import { CardActionArea } from "@mui/material";
 import Image, { StaticImageData } from "next/image";
-import styles from "./ServiceCard.module.css";
+import styles from "./AdvantagesCard.module.css";
 
 interface Card {
   title: string;
+  text: string;
   image: StaticImageData;
+  margin: string;
 }
-export default function ServiceCard({ title, image }: Card) {
+export default function AdvantagesCard({ title, text, image, margin }: Card) {
   return (
     <Card
       className={styles.card}
-      sx={{ boxShadow: "none", padding: "30px", maxWidth: 345 }}
+      sx={{ margin, padding: "30px", maxWidth: 345 }}
     >
       <CardActionArea>
         <Image alt="painting-icon" src={image} />
@@ -27,6 +29,13 @@ export default function ServiceCard({ title, image }: Card) {
             sx={{ textAlign: "center" }}
           >
             {title}
+          </Typography>
+          <Typography
+            variant="body2"
+            color="text.secondary"
+            sx={{ textAlign: "center" }}
+          >
+            {text}
           </Typography>
         </CardContent>
       </CardActionArea>

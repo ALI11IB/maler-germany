@@ -1,104 +1,78 @@
-import { Box, Divider, Grid, Typography } from "@mui/material";
+import { Box, Divider, Grid, IconButton, Typography } from "@mui/material";
 import * as React from "react";
 import ServiceCard from "../ServiceCard";
-import styles from "./Services.module.css";
-import painting1 from "../../../../assets/icons/painting1.png";
-import painting2 from "../../../../assets/icons/painting2.png";
-import painting3 from "../../../../assets/icons/painting3.png";
+import service1 from "../../../../assets/icons/service1.png";
+import service2 from "../../../../assets/icons/service2.png";
+import service3 from "../../../../assets/icons/service3.png";
+import service4 from "../../../../assets/icons/service4.png";
+import service5 from "../../../../assets/icons/service5.png";
+import service6 from "../../../../assets/icons/service6.png";
 
-const cards = [
+const items = [
   {
-    title: "Interior Painting",
-    text: "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et",
-    image: painting1,
-    margin: "50px 20px",
+    id: "1",
+    title: "Wall/Ceiling paint",
+    image: service1,
   },
   {
-    title: "Exterior Painting",
-    text: "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et",
-    image: painting2,
-    margin: "20px 20px",
+    id: "2",
+    title: "Window frames paint",
+    image: service2,
   },
   {
-    title: "Exterior Painting",
-    text: "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et",
-    image: painting3,
-    margin: "50px 20px",
+    id: "3",
+    title: "Window frames paint",
+    image: service3,
+  },
+  {
+    id: "4",
+    title: "Door paint / lacquer",
+    image: service4,
+  },
+  {
+    id: "5",
+    title: "Remove old paint",
+    image: service5,
+  },
+  {
+    id: "6",
+    title: "Floor Renovation",
+    image: service6,
   },
 ];
 export default function Services() {
   return (
     <Grid container spacing={2}>
-      <Grid item xs={4} md={4}>
-        <ServiceCard {...cards[0]} />
-      </Grid>
-      <Grid item xs={4} md={4}>
-        <ServiceCard {...cards[1]} />
-      </Grid>
-      <Grid item xs={4} md={4}>
-        <ServiceCard {...cards[2]} />
-      </Grid>
       <Grid item xs={12}>
         <Typography
           gutterBottom
           variant="h5"
           component="div"
-          sx={{ textAlign: "center" }}
+          sx={{ textAlign: "center", fontSize: "2rem" }}
         >
-          We offer Residential & Commercial Painting services
+          What services are available on the site?
         </Typography>
-        <Box display="flex" justifyContent="center">
-          <Typography
-            variant="body2"
-            color="text.secondary"
-            sx={{
-              textAlign: "center",
-              maxWidth: "700px",
-              fontSize: "1.25rem ",
-            }}
-          >
-            Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
-            nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam
-            erat, sed diam voluptua. At vero eos et accusam et justo duo dolores
-            et ea rebum.
-          </Typography>
-        </Box>
       </Grid>
-      <Grid item xs={12}>
-        <Box display="flex" justifyContent="center" my={2}>
-          <Typography variant="body2" className={styles.offersGolden}>
-            Quality Finish
-          </Typography>
-
-          <Typography
-            variant="body2"
-            className={styles.offersGolden}
-            sx={{ px: { xm: "20px", md: "40px", lg: "60px" } }}
-          >
-            /
-          </Typography>
-
-          <Typography variant="body2" className={styles.offersGolden}>
-            Best Support
-          </Typography>
-
-          <Typography
-            variant="body2"
-            className={styles.offersGolden}
-            sx={{ px: { xm: "20px", md: "40px", lg: "60px" } }}
-          >
-            /
-          </Typography>
-
-          <Typography variant="body2" className={styles.offersGolden}>
-            Better Price
-          </Typography>
-        </Box>
+      <Grid
+        item
+        xs={12}
+        sx={{ display: "flex", justifyContent: "center", flexFlow: "wrap" }}
+      >
+        {items.map((item) => (
+          <Grid item xs={4} md={3} lg={3} key={item.id}>
+            <ServiceCard key={item.id} {...item} />
+          </Grid>
+        ))}
       </Grid>
+
       <Grid item xs={12} md={12}>
         <Divider
           variant="middle"
-          sx={{ borderColor: "rgb(0 0 0 / 21%)", mx: { xm: 4, md: 6, lg: 20 } }}
+          sx={{
+            borderColor: "rgb(0 0 0 / 21%)",
+            my: 4,
+            mx: { xm: 4, md: 6, lg: 20 },
+          }}
         />
       </Grid>
     </Grid>
