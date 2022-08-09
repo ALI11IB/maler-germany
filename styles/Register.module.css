@@ -1,0 +1,25 @@
+.intro {
+  height: 370px;
+  background-image: url("../assets/images/login/login.png");
+  background-position: top;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+.textField {
+  width: 90%;
+  margin-bottom: 40px !important;
+}
+.textField > label {
+  font-size: 1.5rem !important;
+}
+.textField input {
+  height: 2em !important;
+  font-size: 1.2rem !important;
+}
+
+.stayLogged {
+  margin-left: 0 !important;
+}
+.stayLogged .Mui-checked {
+  color: #e68b3f !important;
+}

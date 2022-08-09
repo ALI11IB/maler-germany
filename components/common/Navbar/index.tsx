@@ -1,32 +1,30 @@
 import * as React from "react";
 import Image from "next/image";
-import { styled, alpha } from "@mui/material/styles";
-import AppBar from "@mui/material/AppBar";
-import Box from "@mui/material/Box";
-import Toolbar from "@mui/material/Toolbar";
-import IconButton from "@mui/material/IconButton";
-import Typography from "@mui/material/Typography";
-import Menu from "@mui/material/Menu";
+import {
+  AppBar,
+  Box,
+  Toolbar,
+  IconButton,
+  Typography,
+  Menu,
+  Container,
+  Tooltip,
+  MenuItem,
+  InputBase,
+  TextField,
+} from "@mui/material";
 import MenuIcon from "@mui/icons-material/Menu";
-import SettingsIcon from "@mui/icons-material/Settings";
-import Container from "@mui/material/Container";
-import Avatar from "@mui/material/Avatar";
-import Button from "@mui/material/Button";
-import Tooltip from "@mui/material/Tooltip";
-import MenuItem from "@mui/material/MenuItem";
 import SearchIcon from "@mui/icons-material/Search";
+import SettingsIcon from "@mui/icons-material/Settings";
 import PersonIcon from "@mui/icons-material/Person";
-import InputBase from "@mui/material/InputBase";
-import logo from "../../../assets/images/logo.png";
-import { textTransform } from "@mui/system";
-import TextField from "@mui/material/TextField";
-import LanguageSelect from "@components/ui/LanguageSelect";
-import styles from "./Navbar.module.css";
 import Link from "@components/common/Link";
+import LanguageSelect from "@components/ui/LanguageSelect";
+import logo from "../../../assets/images/logo.png";
+import styles from "./Navbar.module.css";
 
 const pages = [
   { id: "1", name: "Home", href: "/" },
-  { id: "2", name: "Register", href: "/register" },
+  { id: "2", name: "Register", href: "/login" },
 ];
 const settings = ["Profile", "Account", "Dashboard", "Logout"];
 
