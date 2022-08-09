@@ -9,3 +9,32 @@
   height: 2em !important;
   font-size: 1.2rem !important;
 }
+.subscribe {
+  min-height: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url("../../../../assets/images/subscribe.png");
+  background-position: top;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.subscribeText {
+  border-radius: 25px;
+  background-color: #ffff;
+  width: 60%;
+}
+.subscribeText fieldset {
+  border: none !important;
+}
+
+.subscribeButton {
+  color: #ffff;
+  background-color: #e68b3f;
+  font-size: 0.75rem;
+  text-transform: none;
+  margin: 0 15px;
+  border-radius: 25px;
+  border: none;
+}

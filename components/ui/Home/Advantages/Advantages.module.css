@@ -1,6 +1,6 @@
 .offersGolden {
   text-align: center;
   max-width: 700px;
-  font-size: 1.5rem;
+  font-size: 1.5rem !important;
   color: #e68b3f;
 }

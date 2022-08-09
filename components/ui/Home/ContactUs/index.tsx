@@ -74,7 +74,48 @@ export default function ContactUs() {
       <Grid item xs={6}>
         <Image alt="contact" src={contactUs} />
       </Grid>
-
+      <Grid item xs={12} className={styles.subscribe}>
+        <Grid item xs={12} md={6}>
+          <Typography
+            gutterBottom
+            variant="h5"
+            component="div"
+            sx={{
+              textAlign: "center",
+              mx: 3,
+              fontSize: { xm: "0.75rem", md: "1rem", lg: "1.5rem" },
+            }}
+          >
+            Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
+            nonumy eirmod tempor invidunt ut labore et dolore magna.
+          </Typography>
+        </Grid>
+        <Grid
+          item
+          xs={12}
+          md={6}
+          display="flex"
+          justifyContent={"center"}
+          alignItems="center"
+          marginBottom={2}
+        >
+          <TextField
+            id="outlined-textarea"
+            placeholder="Enter your email"
+            className={styles.subscribeText}
+            sx={{}}
+          />
+          <Button
+            className={styles.subscribeButton}
+            variant="outlined"
+            sx={{
+              padding: { xs: 0.5, md: 1, lg: 2 },
+            }}
+          >
+            Send Message
+          </Button>
+        </Grid>
+      </Grid>
       <Grid item xs={12} md={12}>
         <Divider
           variant="middle"
