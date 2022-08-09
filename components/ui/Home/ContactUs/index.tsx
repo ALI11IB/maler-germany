@@ -116,7 +116,7 @@ export default function ContactUs() {
           </Button>
         </Grid>
       </Grid>
-      <Grid item xs={12} md={12}>
+      {/* <Grid item xs={12} md={12}>
         <Divider
           variant="middle"
           sx={{
@@ -125,7 +125,7 @@ export default function ContactUs() {
             mx: { xm: 4, md: 6, lg: 20 },
           }}
         />
-      </Grid>
+      </Grid> */}
     </Grid>
   );
 }

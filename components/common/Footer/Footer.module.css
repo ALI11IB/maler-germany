@@ -1,0 +1,17 @@
+.parent {
+  display: flex;
+  flex-direction: column;
+  padding: 0 5px;
+}
+.title {
+  font-size: 1rem;
+}
+.link {
+  font-size: 0.75rem;
+  margin-top: 10px;
+}
+.socialMedia {
+  width: 26%;
+  margin-top: 5px;
+  cursor: pointer;
+}
