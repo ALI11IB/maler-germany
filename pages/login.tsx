@@ -49,6 +49,7 @@ const Login: NextPage = () => {
             flexDirection={"column"}
             justifyContent="start"
             alignItems="start"
+            sx={{ borderRight: "1px solid rgba(0, 0, 0, 0.6)" }}
           >
             <TextField
               id="User-Name"
@@ -82,7 +83,8 @@ const Login: NextPage = () => {
               <Typography
                 gutterBottom
                 variant="h5"
-                component="div"
+                component="a"
+                href="/"
                 sx={{ textAlign: "center", fontSize: "0.75rem" }}
               >
                 Forgot password?

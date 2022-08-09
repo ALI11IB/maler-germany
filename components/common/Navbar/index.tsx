@@ -24,7 +24,7 @@ import styles from "./Navbar.module.css";
 
 const pages = [
   { id: "1", name: "Home", href: "/" },
-  { id: "2", name: "Register", href: "/login" },
+  { id: "2", name: "Register", href: "/register-user" },
 ];
 const settings = ["Profile", "Account", "Dashboard", "Logout"];
 
