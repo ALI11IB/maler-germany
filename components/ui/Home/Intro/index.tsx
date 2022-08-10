@@ -5,7 +5,7 @@ import styles from "./Intro.module.css";
 export default function Intro() {
   return (
     <Grid container spacing={2}>
-      <Grid item xs={8}>
+      <Grid item xs={8} sx={{ display: { xs: "none", sm: "block" } }}>
         <Typography
           className={styles.introTitle}
           variant="h6"
@@ -30,7 +30,7 @@ export default function Intro() {
           Handymen?
         </Typography>
       </Grid>
-      <Grid item xs={4}>
+      <Grid item xs={4} sx={{ display: { xs: "none", sm: "block" } }}>
         <Typography
           className={styles.introTitle}
           variant="h6"
