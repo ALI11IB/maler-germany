@@ -19,7 +19,6 @@ import linkedin from "../../../assets/icons/linkedin.png";
 import twitter from "../../../assets/icons/twitter.png";
 import youtube from "../../../assets/icons/youtube.png";
 import instagram from "../../../assets/icons/instagram.png";
-import { ClassNames } from "@emotion/react";
 
 export default function Footer() {
   return (
