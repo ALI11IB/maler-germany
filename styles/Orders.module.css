@@ -1,71 +1,71 @@
 .orderHeader {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: relative;
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  position: relative !important;
 }
 .orderTitle {
-  position: absolute;
-  top: 35%;
-  left: 35%;
+  position: absolute !important;
+  top: 35% !important;
+  left: 35% !important;
 }
 
 .dividor {
-  width: 300px;
-  height: 1px;
-  border-bottom: 1px solid black;
-  margin-top: 2px;
+  width: 300px !important;
+  height: 1px !important;
+  border-bottom: 1px solid black !important;
+  margin-top: 2px !important;
 }
 .cardContainer {
-  display: flex;
-  justify-content: start;
-  align-items: center;
-  flex-flow: wrap;
+  display: flex !important;
+  justify-content: start !important;
+  align-items: center !important;
+  flex-flow: wrap !important;
 }
 .orderCard {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  background-color: #eaeaea;
-  border: 1px solid #a7a7a7;
-  border-radius: 5px;
-  margin: 30px;
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: center !important;
+  align-items: center !important;
+  background-color: #eaeaea !important;
+  border: 1px solid #a7a7a7 !important;
+  border-radius: 5px !important;
+  margin: 30px !important;
 }
 .cardTitle {
-  font-size: 1rem;
-  margin: 20px 0;
-  color: #494949;
+  font-size: 1rem !important;
+  margin: 20px 0 !important;
+  color: #494949 !important;
 }
 .cardFooter {
-  display: flex;
-  justify-content: end;
-  font-size: 0.75rem;
-  color: #e58636;
-  width: 100%;
+  display: flex !important;
+  justify-content: end !important;
+  font-size: 0.75rem !important;
+  color: #e58636 !important;
+  width: 100% !important;
 }
 
 .innerBox {
-  display: flex;
-  width: 100%;
-  justify-content: center;
-  align-items: center;
+  display: flex !important;
+  width: 100% !important;
+  justify-content: center !important;
+  align-items: center !important;
 }
 .innerBox div {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  background-color: #fcfcfc;
-  border-radius: 10px;
-  padding: 10px 0;
-  margin: 0 15px 20px 15px;
-  width: 20%;
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: center !important;
+  align-items: center !important;
+  background-color: #fcfcfc !important;
+  border-radius: 10px !important;
+  padding: 10px 0 !important;
+  margin: 0 15px 20px 15px !important;
+  width: 20% !important;
 }
 .innerBox h6 {
-  font-size: 0.75rem;
-  color: #979797;
+  font-size: 0.75rem !important;
+  color: #979797 !important;
 }
 .innerBox h6:nth-child(2) {
-  margin: 10px 0;
+  margin: 10px 0 !important;
 }

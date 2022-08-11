@@ -25,28 +25,28 @@
 }
 
 .inputBox {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  flex-flow: wrap;
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  width: 100% !important;
+  flex-flow: wrap !important;
 }
 .select {
-  margin: 15px 20px 0px 0px;
-  width: 35%;
+  margin: 15px 20px 0px 0px !important;
+  width: 35% !important;
 }
 .select div {
-  border-radius: 10px;
+  border-radius: 10px !important;
 }
 .select div::before {
   border-bottom: none !important;
 }
 .inputText {
-  margin: 15px 20px 0px 0px;
-  width: 35%;
+  margin: 15px 20px 0px 0px !important;
+  width: 35% !important;
 }
 .inputText div {
-  border-radius: 10px;
+  border-radius: 10px !important;
 }
 .inputText div::before {
   border-bottom: none !important;
@@ -57,23 +57,23 @@
 } */
 
 .registerBox {
-  width: 65%;
-  position: relative;
+  width: 65% !important;
+  position: relative !important;
 }
 .registerBox span:nth-child(2) {
   position: absolute !important;
-  top: 20%;
-  left: 20%;
+  top: 20% !important;
+  left: 20% !important;
 }
 .registerUserBox {
-  position: relative;
-  width: 70%;
-  display: flex;
+  position: relative !important;
+  width: 70% !important;
+  display: flex !important;
 }
 .registeruserImage2 {
-  position: absolute;
-  z-index: 10;
-  width: 60%;
-  left: 20%;
-  top: 15%;
+  position: absolute !important;
+  z-index: 10 !important;
+  width: 60% !important;
+  left: 20% !important;
+  top: 15% !important;
 }
