@@ -21,7 +21,7 @@ import provider from "../assets/icons/provider.png";
 const Login: NextPage = () => {
   return (
     <Box sx={{ flexGrow: 1, width: "100%" }}>
-      <Box className={styles.intro}>
+      <Box className={styles.loginHeader}>
         <UnsignedNavbar />
 
         <Typography
@@ -138,6 +138,8 @@ const Login: NextPage = () => {
               <Typography
                 variant="body2"
                 color="text.secondary"
+                component={"a"}
+                href="/register-user"
                 sx={{
                   textAlign: "center",
                   maxWidth: "700px",
@@ -160,6 +162,8 @@ const Login: NextPage = () => {
               <Typography
                 variant="body2"
                 color="text.secondary"
+                component={"a"}
+                href="/register-provider"
                 sx={{
                   textAlign: "center",
                   maxWidth: "700px",

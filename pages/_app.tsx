@@ -17,7 +17,7 @@ const theme = createTheme({
     fontFamily: '"Poppins", "Roboto", "Helvetica", "Arial", sans-serif',
   },
 });
-console.log(theme);
+// console.log(theme);
 
 function MyApp({
   Component,

@@ -25,7 +25,9 @@ import styles from "./Navbar.module.css";
 
 const pages = [
   { id: "1", name: "Home", href: "/" },
-  { id: "2", name: "Register", href: "/register-user" },
+  { id: "2", name: "Login", href: "/login" },
+  { id: "3", name: "Orders", href: "/orders" },
+  { id: "4", name: "Archive", href: "/archive" },
 ];
 const settings = ["Profile", "Account", "Dashboard", "Logout"];
 
@@ -147,22 +149,6 @@ const ResponsiveAppBar = () => {
                 </Menu>
               </Box>
             </Grid>
-            {/* <Box sx={{ display: { xs: "flex", md: "none" }, mr: 1 }}>
-            <Image src={logo} alt={"logo"} />
-          </Box>
-          <Typography
-            variant="h5"
-            noWrap
-            component="a"
-            href=""
-            sx={{
-              display: { xs: "flex", md: "none" },
-              fontSize: "35px",
-            }}
-            className={styles.maler}
-          >
-            Maler2
-          </Typography> */}
             <Grid
               item
               xs={4}

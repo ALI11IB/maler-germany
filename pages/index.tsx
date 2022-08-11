@@ -24,7 +24,7 @@ const Home: NextPage = () => {
     <Box sx={{ flexGrow: 1, width: "100%" }}>
       <Box
         className={styles.intro}
-        sx={{ height: { xs: "230px", sm: "550px", md: "865px", lg: "865px" } }}
+        sx={{ height: { xs: "340px", sm: "550px", md: "865px", lg: "865px" } }}
       >
         <Navbar />
         <Intro />

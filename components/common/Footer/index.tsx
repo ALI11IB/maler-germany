@@ -184,7 +184,7 @@ export default function Footer() {
           </Grid>
         </Grid>
 
-        <Grid item xs={12} md={12}>
+        <Grid item xs={12} md={12} marginBottom={4}>
           <Divider
             variant="middle"
             sx={{
@@ -193,6 +193,16 @@ export default function Footer() {
               mx: { xm: 4, md: 6, lg: 20 },
             }}
           />
+          <Typography
+            variant="h6"
+            sx={{
+              display: "flex",
+              justifyContent: "center",
+              fontSize: "0.75rem",
+            }}
+          >
+            ALL RIGHTS RESERVED
+          </Typography>
         </Grid>
       </Grid>
     </Container>
