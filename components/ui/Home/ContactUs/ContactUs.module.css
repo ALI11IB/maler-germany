@@ -30,11 +30,11 @@
 }
 
 .subscribeButton {
-  color: #ffff;
-  background-color: #e68b3f;
-  font-size: 0.75rem;
-  text-transform: none;
-  margin: 0 15px;
-  border-radius: 25px;
-  border: none;
+  color: #ffff !important;
+  background-color: #e68b3f !important;
+  font-size: 0.75rem !important;
+  text-transform: none !important;
+  margin: 0 15px !important;
+  border-radius: 25px !important;
+  border: none !important;
 }
