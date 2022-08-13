@@ -10,8 +10,9 @@ import styles from "./ChoosePaintCard.module.css";
 interface Card {
   title: string;
   image: StaticImageData;
+  onClick: () => void;
 }
-export default function ChoosePaintCard({ title, image }: Card) {
+export default function ChoosePaintCard({ title, image, onClick }: Card) {
   return (
     <Card
       className={styles.card}
@@ -20,6 +21,7 @@ export default function ChoosePaintCard({ title, image }: Card) {
         maxWidth: 225,
         padding: { xs: "10px", sm: "20px", md: "30px" },
       }}
+      onClick={onClick}
     >
       <CardActionArea>
         <Image alt="painting-icon" src={image} />
