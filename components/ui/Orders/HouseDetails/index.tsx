@@ -8,7 +8,7 @@ import KeyboardArrowLeft from "@mui/icons-material/KeyboardArrowLeft";
 import KeyboardArrowRight from "@mui/icons-material/KeyboardArrowRight";
 import { Grid } from "@mui/material";
 import { stepSwitcher } from "../Steps";
-import styles from "./HouseInfo.module.css";
+import styles from "./HouseDetails.module.css";
 // const steps = [
 //   {
 //     label: "Please choose what kind of paint do you need",
@@ -16,7 +16,7 @@ import styles from "./HouseInfo.module.css";
 //   },
 // ];
 
-export default function HouseInfo() {
+export default function HouseDetails() {
   const theme = useTheme();
   const [paintType, setPaintType] = useState<string | null>(null);
 
@@ -63,11 +63,25 @@ export default function HouseInfo() {
               {steps[activeStep]?.label}
             </Typography>
           </Box>
+          <Box width={"100%"} className={styles.badgeBox}>
+            <Typography
+              display={steps[activeStep]?.badge ? "flex" : "none"}
+              className={styles.badge}
+              variant="h5"
+              component="div"
+              sx={{
+                fontSize: { xs: "0.75rem", sm: "1rem", md: "1.5rem" },
+                width: { xs: "100px", sm: "140px", md: "180px" },
+              }}
+            >
+              {steps[activeStep]?.badge}
+            </Typography>
+          </Box>
           <Box
             display="flex"
             justifyContent={"center"}
-            alignItems={"center"}
-            minHeight={"400px"}
+            alignItems={"start"}
+            minHeight={"325px"}
             width="100%"
           >
             {steps[activeStep]?.component({
@@ -76,7 +90,7 @@ export default function HouseInfo() {
               handleNext,
             })}
           </Box>
-          <Box width={"50%"} display={activeStep === 1 ? "none" : "block"}>
+          <Box width={"50%"} display={activeStep === 0 ? "none" : "block"}>
             <MobileStepper
               variant="text"
               steps={maxSteps}
@@ -84,6 +98,7 @@ export default function HouseInfo() {
               activeStep={activeStep}
               nextButton={
                 <Button
+                  className={styles.controlButton}
                   size="small"
                   onClick={handleNext}
                   disabled={activeStep === maxSteps - 1}
@@ -98,6 +113,7 @@ export default function HouseInfo() {
               }
               backButton={
                 <Button
+                  className={styles.controlButton}
                   size="small"
                   onClick={handleBack}
                   disabled={activeStep === 0}

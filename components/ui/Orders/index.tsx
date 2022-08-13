@@ -1,1 +1,1 @@
-export { default as HouseInfo } from "./HouseInfo";
+export { default as HouseDetails } from "./HouseDetails";

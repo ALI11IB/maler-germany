@@ -1,0 +1,56 @@
+.titleBox {
+  position: relative;
+  background-color: #fae7d7;
+}
+.titleBox::before {
+  content: "";
+  display: block;
+  width: 55px;
+  height: 55px;
+  position: absolute;
+  background: #fae7d7;
+  bottom: -28px;
+  left: 47%;
+  transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+}
+@media (max-width: 700px) {
+  .titleBox::before {
+    width: 35px;
+    height: 35px;
+    bottom: -18px;
+    left: 43%;
+  }
+}
+
+.badgeBox {
+  justify-content: flex-start;
+  align-items: center;
+  margin-top: 40px;
+}
+.badge {
+  text-align: start !important;
+  border-bottom-right-radius: 8px !important;
+  border-top-right-radius: 8px !important;
+  background-color: #e58636 !important;
+  color: #ffff !important;
+}
+.controlButton {
+  color: black !important;
+  text-transform: none !important;
+  font-size: 1rem !important;
+}
+.controlButton:disabled {
+  color: #bdbdd2 !important;
+}
+
+.controlButton svg {
+  color: #ffff;
+  background: #e58636;
+  margin: 5px;
+  border-radius: 7px;
+  font-size: 1.5rem;
+}

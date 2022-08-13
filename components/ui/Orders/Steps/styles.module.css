@@ -1,0 +1,36 @@
+/* house space */
+.textField {
+  border-radius: 10px !important;
+  color: #acacac !important;
+}
+.textField > div {
+  color: #acacac !important;
+}
+.textField fieldset {
+  border: none !important;
+}
+
+/* house info */
+.itemsNum {
+  width: 50px !important;
+}
+
+.itemsNum fieldset {
+  border: none !important;
+}
+
+.detailsButton {
+  color: #ffff !important;
+  background-color: #e68b3f !important;
+  font-size: 1rem !important;
+  text-transform: none !important;
+  padding: 0 2px !important;
+  min-width: 125px !important;
+  border-radius: 10px !important;
+}
+.removeButton {
+  color: #000000 !important;
+}
+.addButton {
+  color: #e68b3f !important;
+}

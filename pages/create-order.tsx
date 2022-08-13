@@ -8,7 +8,7 @@ import { Navbar } from "@components/common";
 import styles from "../styles/Home.module.css";
 
 import { Container, Typography, Box, Grid } from "@mui/material";
-import { ChoosePaint, HouseInfo } from "@components/ui/Orders";
+import { HouseDetails } from "@components/ui/Orders";
 const CreateOrder: NextPage = () => {
   return (
     <Box sx={{ flexGrow: 1, width: "100%" }}>
@@ -21,7 +21,7 @@ const CreateOrder: NextPage = () => {
           <ChoosePaint paintType={paintType} setPaintType={setPaintType} />
         )} */}
 
-        <HouseInfo />
+        <HouseDetails />
       </Container>
     </Box>
   );
